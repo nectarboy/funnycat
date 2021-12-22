@@ -8,6 +8,8 @@
         <link rel='shortcut icon' href='src/favicon.png' type='image/png'>
         <title>funny cat</title>
 
+        <!-- hi :D ps u can reset your click counter by pressing the letter C 5 times -->
+
         <style>
             html, body {
                 margin: 0;
@@ -19,7 +21,21 @@
                 height: 100%;
             }
 
+            .AbsoluteContainer {
+                display: block;
+                position: absolute;
+            }
+
+            .Text {
+                padding-left: 20px;
+                font-size: 12px;
+                color: white;
+
+                user-select: none;
+            }
+
             .Canvas {
+                position: absolute;
                 /*
                 width: 512px;
                 border: 1px solid black;
@@ -30,7 +46,14 @@
     </head>
 
     <body>
-        <canvas id='canvas' class='Canvas'>
+        <div class='AbsoluteContainer'>
+            <canvas id='canvas' class='Canvas'>no cat for u :(</canvas>
+        </div>
+
+        <div class='AbsoluteContainer'>
+            <pre class='Text'>nectarboy 2021</pre>
+            <pre id='clickcounter' class='Text'></pre>
+        </div>
 
         <script src='src/assets.js'></script>
         <script src='src/cat.js'></script>
