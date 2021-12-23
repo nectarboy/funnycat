@@ -22,6 +22,8 @@ function loadAssets(assetBundle, onFinish) {
 }
 
 function playSound(name) {
-    assets[name].currentTime = 0;
+    if (!assets[name].paused) {
+        assets[name].currentTime = 0; // fix for mobile ??
+    }
     assets[name].play();
 }
